@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE Course_Catalog[
+	<!ELEMENT Course_Catalog(Department)
+		<!ELEMENT Department(Title,Chair,Course+)>
+			<!ELEMENT Title #PCDATA>
+			<!ELEMENT Chair(Professor+)>
+				<!ATTLIST Professor
+					First_Name CDATA #REQUIRED
+					Last_Name CDATA #REQUIRED >
+			<!ELEMENT Course >
+				<!ELEMENT Title EMPTY>
+				<!ELEMENT Description EMPTY>
+				<!ELEMENT Instructor(Lecture+,Professor*)>
+					
+				<!ATTLIST Course
+					Number CDATA #REQUIRED
+					Enrollment CDATA #REQUIRED>
+		<!ATTLIST Department
+			Code #REQUIRED>
+		
+]>
