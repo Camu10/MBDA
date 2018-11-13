@@ -1,6 +1,7 @@
+--D.Esquema
 <?xml version="1.0"?>
 <!DOCTYPE Course_Catalog[
-	<!ELEMENT Course_Catalog(Department)
+	<!ELEMENT Course_Catalog(Department)>
 		<!ELEMENT Department(Title,Chair,Course+)>
 			<!ELEMENT Title (#PCDATA)>
 			<!ELEMENT Chair(Professor+)>
@@ -26,206 +27,90 @@
                 Number CDATA #REQUIRED
                 Enrollment CDATA #REQUIRED>
 ]>
+
+PUNTO DOS. 
+1) 
+<?xml version="1.0"?>
+<!DOCTYPE Validaciones[
+    <!ELEMENT Validaciones(Proyectos+)>
+        <!ELEMENT Proyectos (Nombre, Año, Rol, Evaluacion)>
+            <!ELEMENT Nombre (#PCDATA)>
+            <!ELEMENT Año (#PCDATA)>
+            <!ELEMENT Rol (#PCDATA)>
+            <!ELEMENT Evaluacion (#PCDATA)>    
+]>
+
 -- XML Nook
--- XML NoOK: Hay más de un nodo raíz (Course_Catalog,ola_k_ase)
-<Course_Catalog>
-    <Departament Code = "SE">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Course Number="CS110" Enrollment="2000">
-            <Title>Modelos Matematicos</Title>
-            <Description>
-                Introduccion a la logica matematica.
-            </Description>
-            <Instructors>
-                <Professor>
-                    <First_Name>Patricia</First_Name>
-                    <Last_Name>Alvarez</Last_Name>
-                </Professor>
-                <Professor>
-                    <First_Name>Wilmer</First_Name>
-                    <Last_Name>Garzon</Last_Name>
-                </Professor>
-            </Instructors>
-        </Course>
-    </Departament>
-</Course_Catalog>
-<ola_k_ase>
-</ola_k_ase>
+-- XML NoOK: Hay más de un nodo raíz (Validacion,Perfil)
+<Validaciones>
+    <Proyectos>
+        <Nombre> Ayuda tu planeta </Nombre>
+        <Año> 2011 </Año>
+        <Rol> Director </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
+<Perfil>
+</Perfil>
 
---XML NoOK: Etiqueta (Nota) no definida en dtd
-<Course_Catalog>
-    <Departament Code = "SE">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Nota>3.2</Nota>
-        <Course Number="CS110" Enrollment="2000">
-            <Title>Modelos Matematicos</Title>
-            <Description>
-                Introduccion a la logica matematica.
-            </Description>
-            <Instructors>
-                <Professor>
-                    <First_Name>Patricia</First_Name>
-                    <Last_Name>Alvarez</Last_Name>
-                </Professor>
-                <Professor>
-                    <First_Name>Wilmer</First_Name>
-                    <Last_Name>Garzon</Last_Name>
-                </Professor>
-            </Instructors>
-        </Course>
-    </Departament>
-</Course_Catalog>
+--XML NoOK: Los conocimientos no pude ser vacio por lo definido en el DTD
+<Validaciones>
+    <Proyectos>
+        <Nombre> Ayuda tu planeta </Nombre>
+        <Año> </Año>
+        <Rol> Director </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
 
---XML NoOK: Atributo (Code) en conocimiento no definido
-<Course_Catalog>
-    <Departament Code = "">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Course Number="CS110" Enrollment="2000">
-            <Title>Modelos Matematicos</Title>
-            <Description>
-                Introduccion a la logica matematica.
-            </Description>
-            <Instructors>
-                <Professor>
-                    <First_Name>Patricia</First_Name>
-                    <Last_Name>Alvarez</Last_Name>
-                </Professor>
-                <Professor>
-                    <First_Name>Wilmer</First_Name>
-                    <Last_Name>Garzon</Last_Name>
-                </Professor>
-            </Instructors>
-        </Course>
-    </Departament>
-</Course_Catalog>
-
---XML NoOK: Los Instructors no pude ser vacio por lo definido en el DTD
-<Course_Catalog>
-    <Departament Code = "SE">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Course Number="CS110" Enrollment="2000">
-            <Title>Modelos Matematicos</Title>
-            <Description>
-                Introduccion a la logica matematica.
-            </Description>
-            <Instructors>
-                
-            </Instructors>
-        </Course>
-    </Departament>
-</Course_Catalog>
+--XML NoOK: Etiqueta (Curso) no definida en dtd 
+<Validaciones>
+    <Proyectos>
+        <Curso> 304 </Curso>
+        <Nombre> Ayuda tu planeta </Nombre>
+        <Año> </Año>
+        <Rol> Director </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
 
 -- XMLOK
 --OK1
-<Course_Catalog>
-    <Departament Code = "SE">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Course Number="CS110" Enrollment="2000">
-            <Title>Modelos Matematicos</Title>
-            <Description>
-                Introduccion a la logica matematica.
-            </Description>
-            <Instructors>
-                <Professor>
-                    <First_Name>Patricia</First_Name>
-                    <Last_Name>Alvarez</Last_Name>
-                </Professor>
-                <Professor>
-                    <First_Name>Wilmer</First_Name>
-                    <Last_Name>Garzon</Last_Name>
-                </Professor>
-            </Instructors>
-        </Course>
-    </Departament>
-</Course_Catalog>
+<Validaciones>
+    <Proyectos>
+        <Nombre> Todos por todos </Nombre>
+        <Año> 2010 </Año>
+        <Rol> Inversor </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
 
 --OK2
-<Course_Catalog>
-    <Departament Code = "SE">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Course Number="CS111" Enrollment="20001">
-            <Title>Programacion imperativa basica</Title>
-            <Description>
-                Introduccion a la programacion y al diseño de algoritmos para poder desarrollar problemas.
-            </Description>
-            <Instructors>
-                <Professor>
-                    <First_Name>Patricia</First_Name>
-                    <Last_Name>Castañeda</Last_Name>
-                </Professor>
-                <Professor>
-                    <First_Name>Wilmer</First_Name>
-                    <Last_Name>Garzon</Last_Name>
-                </Professor>
-            </Instructors>
-        </Course>
-    </Departament>
-</Course_Catalog>
+<Validaciones>
+    <Proyectos>
+        <Nombre> Oculus Rift </Nombre>
+        <Año> 2018 </Año>
+        <Rol> Contribuyente </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
 
 --OK3
-<Course_Catalog>
-    <Departament Code = "SE">
-        <Title> System Engineering </Title>
-        <Chair>
-            <Professor>
-                <First_Name>Oswaldo</First_Name>
-                <Last_Name>Castillo</Last_Name>
-            </Professor>
-        </Chair>
-        <Course Number="CS112" Enrollment="2002">
-            <Title>Programacion imperativa modular</Title>
-            <Description>
-                Profundizacion en la programacion utilizado diferentes metodos logrando asi una mayor eficacia.
-            </Description>
-            <Instructors>
-                <Professor>
-                    <First_Name>Carlos</First_Name>
-                    <Last_Name>Pinzon</Last_Name>
-                </Professor>
-                <Professor>
-                    <First_Name>Diego</First_Name>
-                    <Last_Name>Satoba</Last_Name>
-                </Professor>
-            </Instructors>
-            <Prerequisites>
-                <Prereq>CS111</Prereq>
-            </Prerequisites>
-        </Course>
-    </Departament>
-</Course_Catalog>
+<Validaciones>
+    <Proyectos>
+        <Nombre> Web bunkers </Nombre>
+        <Año> 2000 </Año>
+        <Rol> Director </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
+
+--OK4
+<Validaciones>
+    <Proyectos>
+        <Nombre> Readly </Nombre>
+        <Año> 2005 </Año>
+        <Rol> Inversor </Rol>
+        <Evaluacion>  </Evaluacion>
+    </Proyectos>
+</Validaciones>
