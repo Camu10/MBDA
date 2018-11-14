@@ -69,3 +69,51 @@ INSERT INTO validaciones VALUES(3,TO_DATE('11-12-2018','dd-mm-yyyy'),NULL,'T',13
         </Proyectos>
     </Validaciones>'
     );
+    
+---NoOk
+---La etiqueta nombre esta vacío
+INSERT INTO validaciones VALUES(1,TO_DATE('01-12-2018','dd-mm-yyyy'),NULL,'E',11,
+'<?xml version = "1.0" encoding="UTF-8"?>
+    <Validaciones>
+        <Proyectos>
+            <Nombre> </Nombre>
+            <Año> 2010 </Año>
+            <Rol> Inversor </Rol>
+            <Evaluacion>  
+                <Evaluado> carlos.murillo-i@mail.escuelaing.edu.co </Evaluado>
+                <Evaluador> eduard.jimenez@mail.escuelaing.edu.co </Evaluador>
+            </Evaluacion>
+        </Proyectos>
+    </Validaciones>'
+    );
+-- El estado es diferente a E , T , A 
+INSERT INTO validaciones VALUES(2,TO_DATE('10-02-2018','dd-mm-yyyy'),NULL,'z',12,
+'<?xml version = "1.0" encoding="UTF-8"?>
+    <Validaciones>
+        <Proyectos>
+            <Nombre> Oculus Rift </Nombre>
+            <Año> 2018 </Año>
+            <Rol> Contribuyente </Rol>
+            <Evaluacion>  
+                <Evaluado> julian.benitez@mail.escuelaing.edu.co </Evaluado>
+                <Evaluador> cesar.gonzalez-c@mail.escuelaing.edu.co </Evaluador>
+            </Evaluacion>
+        </Proyectos>
+    </Validaciones>' 
+    );
+--Tiene dos raices
+INSERT INTO validaciones VALUES(3,TO_DATE('11-12-2018','dd-mm-yyyy'),NULL,'T',13,
+'<?xml version = "1.0" encoding="UTF-8"?>
+    <Validaciones>
+        <Proyectos>
+            <Nombre> Web bunkers </Nombre>
+            <Año> 2000 </Año>
+            <Rol> Director </Rol>
+            <Evaluacion>
+                <Evaluado> miguel.sanchez-g@mail.escuelaing.edu.co </Evaluado>
+                <Evaluador> andres.rocha@mail.escuelaing.edu.co </Evaluador>
+            </Evaluacion>
+        </Proyectos>
+    </Validaciones>
+    <Val> </Val>'
+    );
