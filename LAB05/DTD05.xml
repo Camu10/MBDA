@@ -28,24 +28,24 @@
                 Enrollment CDATA #REQUIRED>
 ]>
 
-PUNTO DOS. 
+PUNTO DOS. (XML ‚Äì Oracle) Linked-us. Formaci√≥n 
 1) 
 <?xml version="1.0"?>
 <!DOCTYPE Validaciones[
     <!ELEMENT Validaciones(Proyectos+)>
-        <!ELEMENT Proyectos (Nombre, AÒo, Rol, Evaluacion)>
+        <!ELEMENT Proyectos (Nombre, A√±o, Rol, Evaluacion)>
             <!ELEMENT Nombre (#PCDATA)>
-            <!ELEMENT AÒo (#PCDATA)>
+            <!ELEMENT A√±o (#PCDATA)>
             <!ELEMENT Rol (#PCDATA)>
             <!ELEMENT Evaluacion (#PCDATA)>    
 ]>
 
 -- XML Nook
--- XML NoOK: Hay m·s de un nodo raÌz (Validacion,Perfil)
+-- XML NoOK: Hay m√°s de un nodo ra√≠z (Validacion,Perfil)
 <Validaciones>
     <Proyectos>
         <Nombre> Ayuda tu planeta </Nombre>
-        <AÒo> 2011 </AÒo>
+        <A√±o> 2011 </A√±o>
         <Rol> Director </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
@@ -57,7 +57,7 @@ PUNTO DOS.
 <Validaciones>
     <Proyectos>
         <Nombre> Ayuda tu planeta </Nombre>
-        <AÒo> </AÒo>
+        <A√±o> </A√±o>
         <Rol> Director </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
@@ -68,7 +68,7 @@ PUNTO DOS.
     <Proyectos>
         <Curso> 304 </Curso>
         <Nombre> Ayuda tu planeta </Nombre>
-        <AÒo> </AÒo>
+        <A√±o> </A√±o>
         <Rol> Director </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
@@ -79,7 +79,7 @@ PUNTO DOS.
 <Validaciones>
     <Proyectos>
         <Nombre> Todos por todos </Nombre>
-        <AÒo> 2010 </AÒo>
+        <A√±o> 2010 </A√±o>
         <Rol> Inversor </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
@@ -89,7 +89,7 @@ PUNTO DOS.
 <Validaciones>
     <Proyectos>
         <Nombre> Oculus Rift </Nombre>
-        <AÒo> 2018 </AÒo>
+        <A√±o> 2018 </A√±o>
         <Rol> Contribuyente </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
@@ -99,7 +99,7 @@ PUNTO DOS.
 <Validaciones>
     <Proyectos>
         <Nombre> Web bunkers </Nombre>
-        <AÒo> 2000 </AÒo>
+        <A√±o> 2000 </A√±o>
         <Rol> Director </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
@@ -109,7 +109,7 @@ PUNTO DOS.
 <Validaciones>
     <Proyectos>
         <Nombre> Readly </Nombre>
-        <AÒo> 2005 </AÒo>
+        <A√±o> 2005 </A√±o>
         <Rol> Inversor </Rol>
         <Evaluacion>  </Evaluacion>
     </Proyectos>
