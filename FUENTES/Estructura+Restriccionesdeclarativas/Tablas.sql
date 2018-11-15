@@ -27,7 +27,7 @@ CREATE TABLE inventario(
 CREATE TABLE ropa(
     id NUMBER NOT NULL
     ,categoria VARCHAR(50) NOT NULL
-    ,anime NUMBER NOT NULL
+    ,anime VARCHAR(50) NOT NULL
     );
 CREATE TABLE figuras(
     id NUMBER NOT NULL
@@ -100,7 +100,6 @@ CREATE TABLE gerente(
     idemple NUMBER NOT NULL
     ,sede NUMBER NOT NULL
     );
-    
 CREATE TABLE proveedores(
     id NUMBER NOT NULL
     ,nombre VARCHAR(50) NOT NULL

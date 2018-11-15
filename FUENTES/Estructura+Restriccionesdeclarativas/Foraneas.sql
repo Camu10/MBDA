@@ -4,7 +4,6 @@ ALTER TABLE elencos ADD CONSTRAINT  FK_personajes_elencos FOREIGN KEY(personaje)
 ALTER TABLE elencos ADD CONSTRAINT  FK_animes_elencos FOREIGN KEY(anime) REFERENCES animes(id);
 ALTER TABLE inventario ADD CONSTRAINT  FK_animes_inventario FOREIGN KEY(anime) REFERENCES animes(id);
 ALTER TABLE inventario ADD CONSTRAINT  FK_inventario_figuras FOREIGN KEY(figura) REFERENCES figuras(id);
-ALTER TABLE ropa ADD CONSTRAINT  FK_animes_ropa FOREIGN KEY(anime) REFERENCES animes(id);
 ALTER TABLE ejemplares ADD CONSTRAINT  FK_animes_ejemplares FOREIGN KEY(anime) REFERENCES animes(id);
 ALTER TABLE ejemplares ADD CONSTRAINT  FK_ropa_ejemplares FOREIGN KEY(ropa) REFERENCES ropa(id);
 ALTER TABLE ejemplares ADD CONSTRAINT  FK_figuras_ejemplares FOREIGN KEY(figura) REFERENCES figuras(id);

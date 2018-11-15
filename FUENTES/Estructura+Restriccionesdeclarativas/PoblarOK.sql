@@ -28,11 +28,11 @@ INSERT INTO elencos (anime , personaje) VALUES (3, 3);
 INSERT INTO elencos (anime , personaje) VALUES (4, 4);
 INSERT INTO elencos (anime , personaje) VALUES (5, 5);
 
-INSERT INTO ropa (id , categoria , anime) VALUES (1, 'Pantalon', 1);
-INSERT INTO ropa (id , categoria , anime) VALUES (2, 'Camisa',2);
-INSERT INTO ropa (id , categoria , anime) VALUES (3, 'Medias', 3);
-INSERT INTO ropa (id , categoria , anime) VALUES (4, 'Gorra', 4);
-INSERT INTO ropa (id , categoria , anime) VALUES (5, 'Gorro', 5);
+INSERT INTO ropa (id , categoria , anime) VALUES (1, 'Pantalon', 'Kanekas');
+INSERT INTO ropa (id , categoria , anime) VALUES (2, 'Camisa','Eren');
+INSERT INTO ropa (id , categoria , anime) VALUES (3, 'Medias', 'Goku');
+INSERT INTO ropa (id , categoria , anime) VALUES (4, 'Gorra', 'Deku');
+INSERT INTO ropa (id , categoria , anime) VALUES (5, 'Gorro', 'Lucy');
 
 INSERT INTO figuras (id , peranime, tama_o) VALUES (1, 'Kanekas','Pequeño');
 INSERT INTO figuras (id , peranime, tama_o) VALUES (2, 'Eren', 'Grande');
