@@ -9,7 +9,7 @@ CREATE TABLE producciones(
 CREATE TABLE personajes(
     id NUMBER NOT NULL
     ,nombre VARCHAR(50) NOT NULL
-    ,nombreanime VARCHAR(50) NOT NULL
+    ,nombreanime VARCHAR(70) NOT NULL
     );
 CREATE TABLE elencos(
     anime NUMBER NOT NULL
@@ -17,7 +17,7 @@ CREATE TABLE elencos(
     );
 CREATE TABLE animes(
     id NUMBER NOT NULL
-    ,nombre VARCHAR(50) NOT NULL
+    ,nombre VARCHAR(70) NOT NULL
     ,genero VARCHAR(50) NOT NULL
     );
 CREATE TABLE inventario(
@@ -27,7 +27,7 @@ CREATE TABLE inventario(
 CREATE TABLE ropa(
     id NUMBER NOT NULL
     ,categoria VARCHAR(50) NOT NULL
-    ,anime VARCHAR(50) NOT NULL
+    ,anime VARCHAR(70) NOT NULL
     );
 CREATE TABLE figuras(
     id NUMBER NOT NULL
