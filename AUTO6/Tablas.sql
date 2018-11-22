@@ -30,15 +30,15 @@ ALTER TABLE event ADD CONSTRAINT PK_event_ PRIMARY KEY(id);
 ALTER TABLE rooms ADD CONSTRAINT PK_rooms PRIMARY KEY(id);
 ALTER TABLE teaches ADD CONSTRAINT PK_teaches PRIMARY KEY(staff,event);
 ALTER TABLE event ADD CONSTRAINT  FK_rooms_event FOREIGN KEY(room) REFERENCES rooms(id);
-ALTER TABLE teaches ADD CONSTRAINT  FK_staff_teaches FOREIGN KEY(staff) REFERENCES staff(id);
+ALTER TABLE teaches ADD CONSTRAINT  FK_staff_teaches FOREIGN KEY(staff) REFERENCES staff(id) ON DELETE CASCADE;
 ALTER TABLE teaches ADD CONSTRAINT  FK_teaches_event FOREIGN KEY(event) REFERENCES event(id);
 
 ---Minimo debe tener un apellido y un nombre---
 ALTER TABLE staff ADD CONSTRAINT CK_name
     CHECK(name LIKE '%, %');
 ---Las unicas personas que pueden estar a cargo son:  MacLean, Aileen y Kemmer, Rob---
-ALTER TABLE teaches ADD CONSTRAINT CK_director
-    CHECK(staff IN('co.AMn','co.RK'));
+--ALTER TABLE teaches ADD CONSTRAINT CK_director
+   -- CHECK(staff IN('co.AMn','co.RK'));
 ---La intensity es de dos sesiones: viernes 2:00 a 5:00 p.m. (L) y sábado de 8:00 a 12:00 (T).---
 ALTER TABLE event ADD CONSTRAINT CK_intensity
     CHECK(kind IN('T','L'));    
@@ -160,7 +160,7 @@ BEGIN
     END IF;
 END;
 /
---- El id inicia en ‘co.’ seguido por la primera letra del apellido y la primera letra del nombre.---
+--- El id inicia en co. seguido por la primera letra del apellido y la primera letra del nombre.---
 CREATE OR REPLACE TRIGGER MO_NAME_INI
     BEFORE INSERT ON staff
     FOR EACH ROW
@@ -183,22 +183,7 @@ BEGIN
         :new.id := 'co.'||primlet||seglet;
     END IF;
 END;
-/*/
----El salón se asigna automáticamente considerando la disponibilidad.---
-CREATE OR REPLACE TRIGGER AD_ROOMS
-    BEFORE INSERT ON event 
-    FOR EACH ROW
-DECLARE
-    dis VARCHAR(20);
-BEGIN
-    SELECT id INTO dis FROM rooms WHERE provision = 'SI';
-    IF dis IS NOT NULL THEN
-        :new.room := dis;
-    ELSE
-        RAISE_APPLICATION_ERROR(-20004,'NO HAY ROOM DISPONIBLE');
-    END IF;
-END;
-/*/
+/
 ---No es posible modificarlos ni eliminarlos---
 CREATE OR REPLACE TRIGGER NO_UPDATE_EVENT
     BEFORE UPDATE ON event
@@ -214,12 +199,13 @@ BEGIN
   RAISE_APPLICATION_ERROR(-20006,'NO SE PERMITE ELIMINAR');
 END;
 /
+/*
 --- Xdisparadores ---
 DROP TRIGGER MO_NAME;
 DROP TRIGGER MO_NAME_INI;
 DROP TRIGGER NO_UPDATE_EVENT;
 DROP TRIGGER NO_DELETE_event;
-
+*/
 --- Escriba 3 instrucciones que permitan probar la actualización de la base de datos ---
 UPDATE staff
 SET name='Cumming, Dr Andrew' WHERE id = 'co.CA';
@@ -253,3 +239,5 @@ DELETE FROM event
 WHERE id = 'co12007';
 DELETE FROM event
 WHERE id = 'co12005';
+DELETE FROM staff
+WHERE id = 'co.RK';
