@@ -3,6 +3,7 @@
 CREATE TABLE staff(
     name VARCHAR(50) NOT NULL
     ,id VARCHAR(50) NOT NULL
+    ,hojadevida XMLTYPE
     );
 CREATE TABLE event(
     id VARCHAR(20)  NOT NULL
@@ -43,8 +44,76 @@ ALTER TABLE event ADD CONSTRAINT CK_intensity
     CHECK(kind IN('T','L'));    
 
 ---(AtributosOK,TuplasOK)---
-INSERT INTO staff VALUES('MacLean, Aileen','co.AMn');
-INSERT INTO staff VALUES('Kemmer, Rob','co.RK');
+INSERT INTO staff VALUES('MacLean, Aileen','co.AMn',
+    '<?xml version = "1.0" encoding="UTF-8"?>
+        <Informacion>
+           <Area>informatica</Area>
+           <Ultimogrado>pos-doctorado</Ultimogrado>
+           <Títulos>
+              <Título>Nombre =  "Ingeniero Mecatronico"
+                            Año= "2010"
+                            Grado = "Doctorado"</Título> 
+           </Títulos>
+           <Reconocimientos>
+              <Reconocimiento>Nombre = "Inovacion en tencologia"
+                            Institucion =  "Tecnnova"
+                            Año = "2015"</Reconocimiento>
+           </Reconocimientos>
+           <Artículos>
+              <Artículo>NombreDelArtículo = "La tecnologia y sus ventajas"
+                            NombreDeLaRevista =  "Tecnopolis"
+                            Año = "2015"
+                            CategoríaColciencias = "A1"</Artículo>
+           </Artículos>
+           <Asignaturas>
+              <Asignatura>Nombre = "Circuitos"
+                            Numero = "6"</Asignatura>
+           </Asignaturas>
+           <Experiencia>
+              <Institucion>Nombre = "Universidad Nacional"
+                            AñoInicio = "2010"
+                            Cargo = "Profesor"</Institucion>
+           </Experiencia>
+        </Informacion>'
+    );
+INSERT INTO staff VALUES('Kemmer, Rob','co.RK',
+    '<?xml version="1.0" encoding="UTF-8"?>
+        <Informacion>
+           <Area>Historia</Area>
+           <Ultimogrado>Doctorado</Ultimogrado>
+           <Títulos>
+              <Título>Nombre= "Historiador"
+                            Año= "2005"
+                            Grado= "Pregrado"</Título>
+           </Títulos>
+           <Reconocimientos>
+              <Reconocimiento>Nombre= "Conociendo nuestra historia"
+                            Institucion= "Centro de memoria historica"
+                            Año= "2017"</Reconocimiento>
+              <Reconocimiento>Nombre= "La historia es de todos"
+                            Institucion= "Centro de memoria historica"
+                            Año= "2000"</Reconocimiento>
+           </Reconocimientos>
+           <Artículos>
+              <Artículo>NombreDelArtículo= "Nuestra historia"
+                            NombreDeLaRevista= "Basta ya"
+                            Año= "2010"
+                            CategoríaColciencias= "B"</Artículo>
+           </Artículos>
+           <Asignaturas>
+              <Asignatura>Nombre= "Historia de Colombia"
+                            Numero= "10"</Asignatura>
+           </Asignaturas>
+           <Experiencia>
+              <Institucion>Nombre= "Universidad Nacional"
+                            AñoInicio= "2010"
+                            Cargo="Profesor"</Institucion>
+              <Institucion>Nombre= "Universidad Distrital"
+                            AñoInicio="2017"
+                            Cargo= "Profesor"</Institucion>
+           </Experiencia>
+        </Informacion>'
+    );
 
 INSERT INTO rooms VALUES('co.117',NULL,32,NULL);
 INSERT INTO rooms VALUES('co.100',NULL,10,NULL);
