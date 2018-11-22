@@ -117,3 +117,32 @@ INSERT INTO validaciones VALUES(3,TO_DATE('11-12-2018','dd-mm-yyyy'),NULL,'T',13
     </Validaciones>
     <Val> </Val>'
     );
+	
+	
+--Consulta
+
+SELECT *
+FROM validaciones
+
+
+--4.
+
+INSERT INTO validaciones VALUES(10,TO_DATE('24-08-2018','dd-mm-yyyy'),NULL,'A',11,
+'<?xml version = "1.0" encoding="UTF-8"?>
+    <Validaciones>
+        <Proyectos>
+            <Nombre> UwU </Nombre>
+            <Año> 2000 </Año>
+            <Rol> Gerente </Rol>
+            <Evaluacion>  
+                <Evaluado> carlos.murillo-i@mail.escuelaing.edu.co </Evaluado>
+                <Evaluador> eduard.jimenez@mail.escuelaing.edu.co </Evaluador>
+            </Evaluacion>
+			<Tjustificacion> 
+					<Fecha> 27-04-1999 </Fecha>
+					<Descripcion> Los evaluadores consideran que la validacion debe ser aprovada por ... </Descripcion>
+			</Tjustificacion>
+        </Proyectos>
+    </Validaciones>'
+    );
+
