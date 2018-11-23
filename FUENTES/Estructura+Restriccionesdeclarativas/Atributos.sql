@@ -1,5 +1,5 @@
 ALTER TABLE animes ADD CONSTRAINT CK_animes
-    CHECK(genero IN('Kodomo','Shonen','Sh?jo','Seinen','Josei','Mahô shôjo','Mecha','Sentai','Spokon','Post-apocalíptico','Meitantei','Sh?nen-ai y Yaoi','Sh?jo-ai y Yuri','Hentai','Ecchi','Harem','Harem Reverso','Magical Girlfriend','Anime progresivo','Bish?jo','Bish?nen','Kemono','Super deformed','Moé','Gore'));
+    CHECK(genero IN('Kodomo','Shonen','Sh?jo','Seinen','Josei','Mahô shôjo','Mecha','Sentai','Spokon','Post-apocaliptico','Meitantei','Sh?nen-ai y Yaoi','Sh?jo-ai y Yuri','Hentai','Ecchi','Harem','Harem Reverso','Magical Girlfriend','Anime progresivo','Bish?jo','Bish?nen','Kemono','Super deformed','Moe','Gore'));
 ALTER TABLE ropa ADD CONSTRAINT CK_ropa
     CHECK(categoria IN('Pantalon','Camisa','Camiseta','Saco','Medias','Gorro','Chaqueta','Gorra','Pantaloneta','Bufanda'));
 ALTER TABLE personas ADD CONSTRAINT CK_personas

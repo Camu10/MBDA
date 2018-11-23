@@ -17,7 +17,7 @@ CREATE TABLE elencos(
     );
 CREATE TABLE animes(
     id NUMBER NOT NULL
-    ,nombre VARCHAR(70) NOT NULL
+    ,nombre VARCHAR(90) NOT NULL
     ,genero VARCHAR(50) NOT NULL
     );
 CREATE TABLE inventario(
