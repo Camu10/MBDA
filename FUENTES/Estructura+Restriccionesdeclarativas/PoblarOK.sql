@@ -69,11 +69,18 @@ INSERT INTO ventas (id , empleado , formapago ,valorpagar ,tipodoc, numdoc) VALU
 INSERT INTO ventas (id , empleado , formapago ,valorpagar ,tipodoc, numdoc) VALUES (4 , 4 , 'Efectivo' , 35900 ,'CC', 4 );
 INSERT INTO ventas (id , empleado , formapago ,valorpagar ,tipodoc, numdoc) VALUES (5 , 5 , 'Efectivo' , 80000 ,'CE', 5);
 
-INSERT INTO sedes ( id , direccion, numempleados , venta ) VALUES (1 , 'Carrera 3 # 18- 45' , 200, 1 );
-INSERT INTO sedes ( id , direccion, numempleados , venta ) VALUES (2 , 'Carrera 7 # 84- 72' , 300, 2 );
-INSERT INTO sedes ( id , direccion, numempleados , venta ) VALUES (3 , 'Calle 4 No. 5 – 10' , 20, 3 );
-INSERT INTO sedes ( id , direccion, numempleados , venta ) VALUES (4 , 'Calle 11 No. 4 - 14' , 50, 4 );
-INSERT INTO sedes ( id , direccion, numempleados , venta ) VALUES (5 , 'Calle 24 N° 5-60' , 10, 5 );
+
+INSERT INTO sedes ( id , direccion, numempleados  ) VALUES (1 , 'Carrera 3 # 18- 45' , 200);
+INSERT INTO sedes ( id , direccion, numempleados) VALUES (2 , 'Carrera 7 # 84- 72' , 300);
+INSERT INTO sedes ( id , direccion, numempleados) VALUES (3 , 'Calle 4 No. 5 – 10' , 20);
+INSERT INTO sedes ( id , direccion, numempleados) VALUES (4 , 'Calle 11 No. 4 - 14' , 50);
+INSERT INTO sedes ( id , direccion, numempleados) VALUES (5 , 'Calle 24 N° 5-60' , 10);
+
+INSERT INTO control ( id ,sede , venta) VALUES (1 , 1 , 1);
+INSERT INTO control ( id ,sede , venta) VALUES (2 , 2 , 2);
+INSERT INTO control ( id ,sede , venta) VALUES (3 , 3 , 3);
+INSERT INTO control ( id ,sede , venta) VALUES (4 , 4 , 4);
+INSERT INTO control ( id ,sede , venta) VALUES (5 , 5 , 5);
 
 INSERT INTO ejemplares ( id , cantidad , precio , figura ,ropa , anime , venta , sede ) VALUES (1 , 1 , 20000 , NULL , NULL , 1 ,1 , 1 );
 INSERT INTO ejemplares ( id , cantidad , precio , figura ,ropa , anime , venta , sede ) VALUES (2 , 20 , 300000 , 2 , NULL , NULL , 2 , 2 );
@@ -104,12 +111,6 @@ INSERT INTO contratos (id, tipo , empleado) VALUES (2 , 'Definido' , 2);
 INSERT INTO contratos (id, tipo , empleado) VALUES (3 , 'Definido' ,3);
 INSERT INTO contratos (id, tipo , empleado) VALUES (4 , 'Indefinido' , 4);
 INSERT INTO contratos (id, tipo , empleado) VALUES (5 , 'Indefinido' , 5);
-
-INSERT INTO recursoshumanos (sede , contrato) VALUES (1 , 1);
-INSERT INTO recursoshumanos (sede , contrato) VALUES (2 , 2);
-INSERT INTO recursoshumanos (sede , contrato) VALUES (3 , 3);
-INSERT INTO recursoshumanos (sede , contrato) VALUES (4 , 4);
-INSERT INTO recursoshumanos (sede , contrato) VALUES (5 , 5);
 
 INSERT INTO gerente ( idemple , sede ) VALUES (1 , 1);
 INSERT INTO gerente ( idemple , sede ) VALUES (2 , 2);

@@ -71,8 +71,12 @@ CREATE TABLE sedes(
     id NUMBER NOT NULL
     ,direccion VARCHAR(50) NOT NULL
     ,numempleados NUMBER NOT NULL
-    ,venta NUMBER NOT NULL
     );
+CREATE TABLE control(
+    id NUMBER NOT NULL
+    ,sede NUMBER NOT NULL
+    ,venta NUMBER NOT NULL
+);
 CREATE TABLE empleados(
     id NUMBER NOT NULL
     ,cargo VARCHAR(50) NOT NULL
@@ -82,10 +86,7 @@ CREATE TABLE empleados(
     ,tipodoc VARCHAR(3) NOT NULL
     ,numdoc VARCHAR(100) NOT NULL
     );
-CREATE TABLE recursoshumanos(
-    sede NUMBER NOT NULL
-    ,contrato NUMBER NOT NULL
-    );
+
 CREATE TABLE contratos(
     id NUMBER NOT NULL
     ,tipo VARCHAR(50) NOT NULL

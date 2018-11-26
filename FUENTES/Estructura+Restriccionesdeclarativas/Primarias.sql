@@ -15,6 +15,6 @@ ALTER TABLE clientes ADD CONSTRAINT PK_clientes PRIMARY KEY(tipodoc,numdoc);
 ALTER TABLE ventas ADD CONSTRAINT PK_ventas PRIMARY KEY(id);
 ALTER TABLE sedes ADD CONSTRAINT PK_sedes PRIMARY KEY(id);
 ALTER TABLE empleados ADD CONSTRAINT PK_empleados PRIMARY KEY(id);
-ALTER TABLE recursoshumanos ADD CONSTRAINT PK_recursoshumanos PRIMARY KEY(sede,contrato);
 ALTER TABLE contratos ADD CONSTRAINT PK_contratos PRIMARY KEY(id);
 ALTER TABLE personas ADD CONSTRAINT PK_personas PRIMARY KEY(tipodoc,numdoc);
+ALTER TABLE control ADD CONSTRAINT PK_control PRIMARY KEY(id);

@@ -12,12 +12,11 @@ ALTER TABLE ejemplares ADD CONSTRAINT  FK_sedes_ejemplares FOREIGN KEY(sede) REF
 ALTER TABLE compras ADD CONSTRAINT  FK_ejemplar_compras FOREIGN KEY(ejemplar) REFERENCES ejemplares(id);
 ALTER TABLE compras ADD CONSTRAINT  FK_proveedores_compras FOREIGN KEY(proveedor) REFERENCES proveedores(id);
 ALTER TABLE clientes ADD CONSTRAINT  FK_tarjetadescuento_clientes FOREIGN KEY(tarjetadescuento) REFERENCES tarjetadescuento(id);
-ALTER TABLE sedes ADD CONSTRAINT  FK_ventas_sedes FOREIGN KEY(venta) REFERENCES ventas(id);
 ALTER TABLE empleados ADD CONSTRAINT  FK_sedes_empleados FOREIGN KEY(sede) REFERENCES sedes(id);
-ALTER TABLE recursoshumanos ADD CONSTRAINT  FK_sedes_recursoshumanos FOREIGN KEY(sede) REFERENCES sedes(id);
-ALTER TABLE recursoshumanos ADD CONSTRAINT  FK_contrato_recursoshumanos FOREIGN KEY(contrato) REFERENCES contratos(id);
 ALTER TABLE gerente ADD CONSTRAINT  FK_sedes_gerente FOREIGN KEY(sede) REFERENCES sedes(id);
 ALTER TABLE contratos ADD CONSTRAINT  FK_empleados_contrato FOREIGN KEY(empleado) REFERENCES empleados(id);
 ALTER TABLE gerente ADD CONSTRAINT  FK_empleados_gerente FOREIGN KEY(idemple) REFERENCES empleados(id);
 ALTER TABLE ventas ADD CONSTRAINT  FK_ventas_clientes FOREIGN KEY(tipodoc,numdoc) REFERENCES clientes(tipodoc,numdoc);
 ALTER TABLE empleados ADD CONSTRAINT  FK_empleados_personas FOREIGN KEY(tipodoc,numdoc) REFERENCES personas(tipodoc,numdoc);
+ALTER TABLE control ADD CONSTRAINT FK_control_sedes FOREIGN KEY(sede) REFERENCES sedes(id);
+ALTER TABLE control ADD CONSTRAINT FK_control_ventas FOREIGN KEY(sede) REFERENCES ventas(id);

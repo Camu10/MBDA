@@ -1,4 +1,4 @@
-INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'ip_address', 'your name.');
+INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Elset Varley', 'your name.');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Darby Caplis', 'Fullmetal Alchemist: Brotherhood');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Aarika Davitashvili', 'Steins;Gate');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Ahmad Newlan', 'Clannad After Story');
@@ -54,7 +54,7 @@ INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Korella Polack', 'Howls
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Carena Saltmarsh', 'Time of Eve');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Blondell Plews', 'Puella Magi Madoka Magica');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Yardley Fugere', 'Mushishi Tokubetsu-hen: Hihamukage');
-INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Elset Varley', 'Natsumes Book of Friends');
+INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'ip_address', 'Natsumes Book of Friends');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Merry Wardingly', 'Millennium Actress');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Griffin Bailles', 'Time of Eve');
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Harli Batcock', 'Monogatari Series Second Season');
