@@ -538,24 +538,6 @@ BEGIN
     END IF;
 END;
 /
-CREATE OR REPLACE TRIGGER AD_COMPETENCIA
-BEFORE INSERT ON logros
-FOR EACH ROW
-DECLARE
-    num NUMBER;
-    compe NUMBER;
-    notiene NUMBER;
-BEGIN
-    SELECT COUNT(*) INTO num FROM competencias WHERE :NEW.nombre = competencias.nombre;
-    SELECT codigo INTO compe FROM competencias WHERE :NEW.nombre = competencias.nombre;
-    IF :NEW.categoria = 'R' AND num > 0   THEN
-        SELECT COUNT(*) INTO notiene FROM atiende WHERE :NEW.correo = atiende.correo AND atiende.codigo = compe;
-        IF notiene = 0 THEN
-            INSERT INTO atiende VALUES(:NEW.correo,compe);
-        END IF;
-    END IF;
-END;
-/
 CREATE OR REPLACE TRIGGER MO_TIPO
 BEFORE UPDATE OF correo,nombre,fecha ON logros
 FOR EACH ROW
@@ -576,7 +558,6 @@ BEGIN
     END IF;
 END;
 /
-
 
 ---Mantener bienes
 
@@ -614,8 +595,8 @@ END;
 
 
 INSERT INTO bienes VALUES('prueba2', 'descripcion');
----MO_DESCRIPCION OK
+---MO_DESCRIPCION NoOk
 UPDATE bienes SET descripcion = 'BB' WHERE nombre = 'prueba2';
 
----MO_DESCRIPCION NoOk
+---MO_DESCRIPCION OK
 UPDATE bienes SET descripcion = 'Esta prueba' WHERE nombre = 'prueba2';
