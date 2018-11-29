@@ -121,19 +121,6 @@ INSERT INTO actua VALUES('lflanner0@vk.com','enseñanza');
 INSERT INTO actua VALUES('mlusk1@reuters.com','salud');
 INSERT INTO actua VALUES('gvanweedenburg2@wikia.com','infraes');
 
----Poblar NoOK
-INSERT INTO profesionales VALUES(NULL,'gvanweedenburg2@wikia.com','Colombia');
-INSERT INTO atiende VALUES(12,'a');
-INSERT INTO profesionales VALUES(NULL,NULL,NULL);
-INSERT INTO logros VALUES('bdeamer1@ifeng.com',NULL,'eficiencia','28-01-2008');
-INSERT INTO evidencias VALUES(1321561328,'A');
-
-INSERT INTO logros VALUES('meddolls0@ow.ly','l','asistencia',TO_DATE('11-08-2010','dd-mm-yyyy'));
-INSERT INTO fundaciones VALUES('lflanner0@vk.com','25-30','http://lflanner0.html');
-INSERT INTO perfiles VALUES('meddolls0@ow.ly','Lucia');
-INSERT INTO actua VALUES('gvanwee@denburg2@wikia.com','infraes');
-INSERT INTO validaciones VALUES(0,'ystrethill2@phoca.cz',TO_DATE('11-12-2018','dd-mm-yyyy'),NULL,'T',13);
-
 DELETE FROM profesionales;
 DELETE FROM logros;
 DELETE FROM atiende;
@@ -232,24 +219,6 @@ ALTER TABLE logros ADD CONSTRAINT FK_profesionales_logoros FOREIGN KEY(correo) R
 ALTER TABLE organiza ADD CONSTRAINT FK_sectores_organiza FOREIGN KEY(nombre) REFERENCES sectores(nombre);
 ALTER TABLE organiza ADD CONSTRAINT FK_organiza_competencias FOREIGN KEY(codigo) REFERENCES competencias(codigo);
 
-
----CICLO 1: PoblarNoOK
-
-INSERT INTO logros VALUES('meddolls0@ow.ly','l','asistencia',TO_DATE('11-08-2010','dd-mm-yyyy')); 
-
-INSERT INTO fundaciones VALUES('lflanner0@vk.com','25-30','http://lflanner0.html'); 
-
-INSERT INTO perfiles VALUES('meddolls0@ow.ly','Lucia');
-
-INSERT INTO actua VALUES('gvanwee@denburg2@wikia.com','infraes'); 
-INSERT INTO validaciones VALUES(0,'ystrethill2@phoca.cz',TO_DATE('11-12-2018','dd-mm-yyyy'),NULL,'T',13);
-INSERT INTO profesionales VALUES('Micky Eddolls','meddol@ls0@ow.ly','Japan'); 
-INSERT INTO fundaciones VALUES('gvanweedenburg2@wikia.com','100+','http://gvanweedenburg2.cpp'); 
-
-INSERT INTO logros VALUES('meddolls0@ow.ly','h','asistencia',TO_DATE('11-08-2010','dd-mm-yyyy'));
-INSERT INTO validaciones VALUES(3,'ystrethill2@phoca.cz',TO_DATE('11-12-2018','dd-mm-yyyy'),NULL,'n',13); 
-INSERT INTO perfiles VALUES('meddolls0@ow.ly','Micky'); 
-INSERT INTO bienes VALUES(NULL, 'descripcion');
 
 ---Poblar mokarro
 INSERT INTO perfiles (correo, nombre) VALUES ('eshropsheir0@buzzfeed.com', 'Eugenie Shropsheir');
@@ -595,8 +564,6 @@ END;
 
 
 INSERT INTO bienes VALUES('prueba2', 'descripcion');
----MO_DESCRIPCION NoOk
-UPDATE bienes SET descripcion = 'BB' WHERE nombre = 'prueba2';
 
 ---MO_DESCRIPCION OK
 UPDATE bienes SET descripcion = 'Esta prueba' WHERE nombre = 'prueba2';
