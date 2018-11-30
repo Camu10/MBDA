@@ -94,12 +94,6 @@ INSERT INTO compras (id , valorcompra , ejemplar , proveedor ) VALUES (3, 10000 
 INSERT INTO compras (id , valorcompra , ejemplar , proveedor ) VALUES (4, 30000 , 4 , 4);
 INSERT INTO compras (id , valorcompra , ejemplar , proveedor ) VALUES (5, 50000 , 5 , 5);
 
-INSERT INTO personas ( nombre , tipodoc , numdoc ) VALUES ('Cesar' ,'CC', 1);
-INSERT INTO personas ( nombre , tipodoc , numdoc ) VALUES ('Migue' ,'NIT', 2);
-INSERT INTO personas ( nombre , tipodoc , numdoc ) VALUES ('Santiago' ,'TI', 3 );
-INSERT INTO personas ( nombre , tipodoc , numdoc ) VALUES ('Carlos','CC', 4 );
-INSERT INTO personas ( nombre , tipodoc , numdoc ) VALUES ('Eduard' ,'CE', 5 );
-
 INSERT INTO empleados ( id , cargo , salario ,tipocontrato , sede , tipodoc , numdoc ) VALUES (1 , 'Vendedor' , 200000 , 'Definido' , 1 ,'CC', 1);
 INSERT INTO empleados ( id , cargo , salario ,tipocontrato , sede , tipodoc , numdoc ) VALUES (2 , 'Administrativo Área Ventas' , 3000000 , 'Definido' , 2 , 'NIT', 2);
 INSERT INTO empleados ( id , cargo , salario ,tipocontrato , sede , tipodoc , numdoc ) VALUES (3 , 'Analista de Ventas' , 1000000 , 'Definido' ,3 , 'TI', 3 );

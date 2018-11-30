@@ -51,8 +51,7 @@ CREATE TABLE compras(
     ,proveedor NUMBER NOT NULL
     );
 CREATE TABLE tarjetadescuento(
-    id NUMBER NOT NULL
-    ,descuento NUMBER NOT NULL
+    descuento NUMBER NOT NULL
     );
 CREATE TABLE clientes(
     tipodoc VARCHAR(50) NOT NULL
@@ -66,6 +65,7 @@ CREATE TABLE ventas(
     ,valorpagar NUMBER NOT NULL
     ,tipodoc VARCHAR(3) NOT NULL
     ,numdoc VARCHAR(50) NOT NULL
+    ,fecha DATE NOT NULL
     );
 CREATE TABLE sedes(
     id NUMBER NOT NULL
@@ -91,11 +91,6 @@ CREATE TABLE contratos(
     id NUMBER NOT NULL
     ,tipo VARCHAR(50) NOT NULL
     ,empleado NUMBER NOT NULL
-    );
-CREATE TABLE personas(
-    nombre VARCHAR(50) NOT NULL
-    ,tipodoc VARCHAR(3) NOT NULL
-    ,numdoc VARCHAR(50) NOT NULL
     );
 CREATE TABLE gerente(
     idemple NUMBER NOT NULL
