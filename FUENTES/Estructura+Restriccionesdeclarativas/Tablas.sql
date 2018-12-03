@@ -70,11 +70,9 @@ CREATE TABLE ventas(
 CREATE TABLE sedes(
     id NUMBER NOT NULL
     ,direccion VARCHAR(50) NOT NULL
-    ,numempleados NUMBER NOT NULL
     );
 CREATE TABLE control(
-    id NUMBER NOT NULL
-    ,sede NUMBER NOT NULL
+    sede NUMBER NOT NULL
     ,venta NUMBER NOT NULL
 );
 CREATE TABLE empleados(
