@@ -93,6 +93,7 @@ CREATE TABLE contratos(
 CREATE TABLE gerente(
     idemple NUMBER NOT NULL
     ,sede NUMBER NOT NULL
+    ,nombre VARCHAR(90) NOT NULL
     );
 CREATE TABLE proveedores(
     id NUMBER NOT NULL

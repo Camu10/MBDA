@@ -1,0 +1,4 @@
+CREATE OR REPLACE VIEW VENTASDIARIAS AS
+    SELECT SUM(valorpagar) AS Ganacia
+    FROM ventas
+    WHERE fecha = TO_DATE(SYSDATE,'DD-MM-YYYY');
