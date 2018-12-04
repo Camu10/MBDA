@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE Informacion[
+    <!ELEMENT Informacion(Area,Titulos,Descripcion,Recomendaciones)
+    <!ELEMENT Area EMPTY> 
+    <!ELEMENT Títulos(Titulo+)>
+        <!ATTLIST Título
+            Nombre CDATA #REQUIRED
+            Año CDATA #REQUIRED
+            Grado CDATA #IMPLIED>
+    <!ELEMENT Descripcion EMPTY> 
+    <!ELEMENT Recomendaciones(Recomendacion*)>
+        <!ATTLIST Recomendacion
+            Cargo CDATA #REQUIRED>
