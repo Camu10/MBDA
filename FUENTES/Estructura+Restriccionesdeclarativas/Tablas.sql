@@ -94,6 +94,7 @@ CREATE TABLE gerente(
     idemple NUMBER NOT NULL
     ,sede NUMBER NOT NULL
     ,nombre VARCHAR(90) NOT NULL
+    ,informacion XMLTYPE
     );
 CREATE TABLE proveedores(
     id NUMBER NOT NULL

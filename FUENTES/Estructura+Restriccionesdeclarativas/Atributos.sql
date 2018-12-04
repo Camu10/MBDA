@@ -9,7 +9,7 @@ ALTER TABLE clientes ADD CONSTRAINT CK_clientes
 ALTER TABLE ventas ADD CONSTRAINT CK_ventas
     CHECK(tipodoc IN ('CC','NIT','TI','CE','TP'));
 ALTER TABLE empleados ADD CONSTRAINT CK_empleados_cargo
-    CHECK(cargo IN ('Vendedor','Administrativo Área Ventas','Analista de Ventas','Analista de Marketing','Promotor','Tesorero','Cajero','Analista de Finanzas','Supervisor de Compras','Servicios Generales','Encargado de Recursos Humanos','Encargado de Informática',''));
+    CHECK(cargo IN ('Vendedor','Administrativo Area Ventas','Analista de Ventas','Analista de Marketing','Promotor','Tesorero','Cajero','Analista de Finanzas','Supervisor de Compras','Servicios Generales','Encargado de Recursos Humanos','Encargado de Informatica','Gerente'));
 ALTER TABLE figuras ADD CONSTRAINT CK_figuras
     CHECK(tama_o IN('Pequeño','Mediano','Grande','Real'));
 ALTER TABLE empleados ADD CONSTRAINT CK_contrato
