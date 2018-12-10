@@ -1,20 +1,31 @@
-DELETE FROM producciones;
-DELETE FROM elencos;
-DELETE FROM inventario;
-DELETE FROM compras;
-DELETE FROM clientes;
-DELETE FROM recursoshumanos;
-DELETE FROM contratos;
-DELETE FROM personas;
 DELETE FROM gerente;
-DELETE FROM proveedores;
-DELETE FROM ejemplares;
-DELETE FROM tarjetadescuento;
-DELETE FROM figuras;
-DELETE FROM ropa;
-DELETE FROM animes;
-DELETE FROM personajes;
-DELETE FROM autores;
+DELETE FROM contratos;
 DELETE FROM empleados;
+DELETE FROM compras;
+DELETE FROM ejemplares;
+DELETE FROM control;
 DELETE FROM sedes;
 DELETE FROM ventas;
+DELETE FROM clientes;
+DELETE FROM tarjetadescuento;
+DELETE FROM proveedores;
+DELETE FROM inventario;
+DELETE FROM figuras;
+DELETE FROM ropa;
+DELETE FROM elencos;
+DELETE FROM personajes;
+DELETE FROM producciones;
+DELETE FROM animes;
+DELETE FROM autores;
+
+
+
+
+
+
+
+
+
+
+
+

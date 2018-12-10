@@ -1,11 +1,8 @@
 INSERT INTO autores( nombre ) VALUES('Eiichiro Oda');
 INSERT INTO animes ( nombre , genero ) VALUES ('Fairy Tail','Shonen');
-INSERT INTO producciones (autor, anime) VALUES (6, 6);
 INSERT INTO personajes ( nombre , nombreanime) VALUES ( 'Lucy', 'Fairy Tail');
-INSERT INTO elencos (anime , personaje) VALUES (6, 6);
 INSERT INTO ropa ( categoria , anime) VALUES ( 'Pantalon', 6);
 INSERT INTO figuras ( peranime, tama_o) VALUES ( 'Natzu','Grande');
-INSERT INTO inventario ( anime , figura ) VALUES (6, 6);
 INSERT INTO proveedores ( nombre ) VALUES ('Animepro');
 
 

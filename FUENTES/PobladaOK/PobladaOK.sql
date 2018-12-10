@@ -14291,7 +14291,7 @@ INSERT INTO compras (valorcompra, ejemplar, proveedor) VALUES (18511941518, 34, 
 INSERT INTO compras (valorcompra, ejemplar, proveedor) VALUES (48273614635, 710, 213);
 INSERT INTO compras (valorcompra, ejemplar, proveedor) VALUES (42536213303, 526, 860);
 
-
+INSERT INTO empleados (cargo, salario, tipocontrato, sede,tipodoc, numdoc) VALUES ( 'Gerente', 489112, 'Definido', 1, 'CC', '987654321'); 
 INSERT INTO empleados (cargo, salario, tipocontrato, sede,tipodoc, numdoc) VALUES ( 'Cajero', 4891192, 'Definido', 7, 'CC', '1374539965'); 
 INSERT INTO empleados (cargo, salario, tipocontrato, sede,tipodoc, numdoc) VALUES ( 'Encargado de Informatica', 4964264, 'Indefinido', 5, 'TP', '4751850247'); 
 INSERT INTO empleados (cargo, salario, tipocontrato, sede,tipodoc, numdoc) VALUES ( 'Encargado de Recursos Humanos', 2772489, 'Indefinido', 5, 'CE', '4696637302'); 
@@ -16346,4 +16346,4 @@ INSERT INTO gerente(idemple,sede,nombre,informacion) VALUES(1000,7,'Felipe Marin
         </Informacion>');
 INSERT INTO gerente(idemple,sede,nombre,informacion) VALUES(111,8,'Brayan Macias',NULL);
 INSERT INTO gerente(idemple,sede,nombre,informacion) VALUES(327,9,'Luis Piza',NULL);
-INSERT INTO gerente(idemple,sede,nombre,informacion) VALUES(226,10,'Andres Rocha',NULL);
+INSERT INTO gerente(idemple,sede,nombre,informacion) VALUES(226,10,'Cristian Arevalo',NULL);
